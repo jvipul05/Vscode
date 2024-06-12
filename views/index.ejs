@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../stylesheets/style.css">
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+  <div id="main">
+  <div id="left">
+    <a id="refresh" href="/"><h3>VsCode</h3></a>
+  <div id="line"></div>
+  <div class="file">
+    <h4>Folder name</h3>
+ <div class="fileicon">
+    <i id="foldercreate" class="ri-folder-add-line"></i>
+    <i id="filecreate" class="ri-file-line"></i>
+    <i class="ri-refresh-line"></i>
+  </div>
+  </div>
+
+  <form id="fileform" action="/filecreate">
+    <input name="filename" type="text" placeholder="filename">
+  </form>
+
+  <form id="folderform" action="/foldercreate">
+    <input name="foldername" type="text" placeholder="foldername">
+  </form>
+
+  <div class="fold">
+    <% files.forEach(function(elem){ %>
+      <h5 class="fil">
+        <%if(elem.isDirectory()){%>
+        <i class="ri-folder-line"></i>
+        <%}else{%>
+        <i class="ri-file-line"></i>
+        <%}%>
+        <%if(elem.isDirectory()){%>
+         <%= elem.name %>
+         <%}else{%>
+          <a href="/file/<%= elem.name %>"><%= elem.name %></a>
+          <%}%>
+         <% }) %>
+
+      </h5>
+  </div>
+  </div>
+  <div id="right">
+    <small>Nothing here</small>
+</div>
+<script>
+   function turnoff()
+   {
+    var allf= [...document.querySelectorAll("form")];
+    allf.forEach(function(elem){
+
+     elem.style.display="none";
+    })
+
+   }
+  var filecreatei=document.querySelector("#filecreate");
+   filecreatei.addEventListener("click",function()
+   { turnoff();
+    document.querySelector("#fileform").style.display="initial";
+   }
+  )
+  var filecreatei=document.querySelector("#foldercreate");
+   filecreatei.addEventListener("click",function()
+   {  turnoff();
+    document.querySelector("#folderform").style.display="initial";
+   }
+  )
+  
+
+</script>
+</body>
+</html>

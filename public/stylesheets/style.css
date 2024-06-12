@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    
+
+}
+#left{
+   padding: 15px;
+    height: 100%;
+    width: 25%;
+    background-color: rgba(88, 153, 153, 0.618);
+}
+#left h3
+{  font-size: medium;
+    color: rgb(10, 10, 10);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+   text-decoration: none;
+  }
+  #left #refresh
+  {
+    text-decoration: none;
+  }
+  
+#right{
+  
+    position : relative;
+    height: 100%;
+    width: 75%;
+    background-color: white;
+}
+#right #refresh
+{
+  text-decoration: none;
+}
+#right small{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+}
+
+#right #rnav
+{
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(252, 248, 245);
+  
+}
+#right  .openedfile
+{
+  padding: 12px  22px;
+  width: fit-content;
+  background-color: rgb(65, 188, 137);
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 5px;
+  color: white;
+}
+.openedfile i
+{
+  margin-left: 10px;
+  color: white;
+}
+.openedfile i:hover
+{
+  background-color: rgb(5, 44, 28);
+  cursor: pointer;
+}
+#right form textarea
+{ 
+  
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 10px;
+  font-family: consolas;
+  font-size: 14px;
+  
+}
+#right form
+{
+  width: 100%;
+  height: calc(100% - 67px);
+}
+#buttonsave
+{
+  position: absolute;
+  top: 2%;
+  right: 3%;
+  padding: 10px 22px;
+  border-radius: 5px;
+  background-color: rgb(97, 177, 172);
+  border: none;
+  outline: none;
+  color: white;
+}
+#buttonsave:hover
+{
+  background-color: rgb(5, 44, 28);
+  cursor: pointer;
+}
+#line
+{
+  height: 2px;
+  background-color: rgb(0, 0, 0);
+  
+}
+.file{
+  color: white;
+  margin-top: 15px;  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ 
+}
+
+.file h4{
+  padding-left: 5px;
+  color: white;
+}
+.file .fileicon
+{
+  display: flex;
+  gap: 10px;
+  
+}
+.fil
+{ 
+  margin-top: 10px;
+  padding: 12px 22px;
+  border-radius: 4px;
+  background-color: antiquewhite;
+  cursor: pointer;
+ 
+}
+#left form{
+  display: none;
+}
+#left form input{
+  font-size: 16px;
+  font-weight: 500;
+  outline: none;
+  color: black;
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px 22px;
+  border-radius: 4px;
+  background-color: rgb(97, 177, 172);
+  
+}
+#left .fold a
+{
+ color: black;
+text-decoration: none;
+}
